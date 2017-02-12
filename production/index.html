@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>design</title>
+	<link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,700i" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/dev.css" />
+	<link rel="stylesheet" type="text/css" href="js/owl/dist/assets/owl.carousel.min.css">
+</head>
+<body>
+	<header class="top">
+		<section id="top-wrapper" class="menu-wrapper">
+			<div class="logo"></div>
+			<nav class="top-menu">
+				<ul>
+					<li></li> 
+					<li>Menu</li>
+					<li>Partners</li>
+					<li>About</li>
+					<li>Contacts</li>
+					<li>Home</li>
+					<li>About</li>
+				</ul>
+			</nav>
+			<div class="bars">
+				<div class="bar"></div>
+			</div>
+		</section>
+	</header>
+	<main>
+		<section class="initpage-wrapper">
+			<article class="central-message">
+				<h1 class="central-message-title">Welcome to Eretz Israel</h1>
+				<p class="central-message-comment">Just for 10 000<currency>S</currency></p>
+				<button class="central-message-submit" type="submit" name="" value="">Lorem ipsum dolor sit amet</button>
+				<div class="icon-group">
+					<div class="icon">
+						<div class="pic1"></div>
+						<p>consectetur adipisicing elit</p>
+						</div>
+					<div class="icon">
+						<div class="pic2"></div>
+						<p>tempor uis nostrullamco labo</p>
+						</div>
+					<div class="icon">
+						<div class="pic3"></div>
+						<p>Sed ut perspiciatis underem aperiam</p>
+						</div>												
+				</div>
+				</article>
+				<div class="permalink">
+					<div class="permalink-title">Lorem ipsum</div>
+					<div class="permalink-comment"><< lorem ipsum dolor</div>
+				</div>
+		</section>
+		<section class="content-wrapper">
+			<aside class="view-display">
+				<img id="display" class="view-display-output" alt="" src="src/img/armygirls.jpg">
+			</aside>
+			<article class="view-options">
+				<h2 class="view-options-title">Lorem ipsum dolor sit amet</h2>
+				<p>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur m </p>
+				<nav id="view-nav" class="view-nav">
+					<ul>
+						<li class="__option-active" pic="src/img/armygirls.jpg">nturvoluptas sit aspernatur aut odit aut fugit,sed quia</li>
+						<li pic="src/img/deadsea.jpg">beatae vitae dicta sunt explicabo. Nemo</li>
+						<li pic="src/img/jerusalem.jpg">ipsam voluptatem quia voluptas</li>
+						<li pic="src/img/medicine.jpg">  vitae dicta sunt explicabo. </li>
+					</ul>
+				</nav>
+			</article>
+		<div class="owl-carousel">
+		  <div> <p class="carousel-title">Lorem</p><img src="src/img/armygirls.jpg"> </div>
+		  <div> <p class="carousel-title">ipsum</p><img src="src/img/deadsea.jpg"></div>
+		  <div> <p class="carousel-title">dolor</p><img src="src/img/jerusalem.jpg"> </div>
+		  <div> <p class="carousel-title">sit</p><img src="src/img/medicine.jpg"> </div>
+		</div>
+		</section>
+	</main>
+	<footer>
+		<p><small><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, autem, perspiciatis quia pariatur ea tempora, ipsum dolor, qui quis eaque cum? Accusantium temporibus totam ullam nesciunt, qui voluptatibus voluptas consectetur!</span><span>Tenetur vero voluptates totam ipsa cum. Hic tenetur quasi sit voluptates soluta optio maiores consequatur error autem earum magni, obcaecati aut eligendi facilis expedita, perspiciatis aperiam repudiandae non commodi vitae!</span> </small></p>
+	</footer>
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/owl/dist/owl.carousel.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#view-nav ul li').click(function() {
+			$('#view-nav ul li').removeClass('__option-active');
+			$(this).addClass('__option-active');
+			var pic = $(this).attr('pic');
+			$('#display').prop('src', pic);
+		});
+		$(window).scroll(function(){
+		var scroll = $(window).scrollTop();
+	    var windowHeight = $(window).height();
+	    if(scroll=>160) {
+	    	$('#top-wrapper').css('background-color', 'rgba(0, 0, 0, 0.8)');
+	    }
+	    if(scroll<160) {
+	    	$('#top-wrapper').css('background-color', 'rgba(0, 0, 0, 0.34)');
+
+	    }			
+	});
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+  	items:1,
+  	margin:50,
+  	center: true,
+  	stagePadding: 10
+  });
+});
+	});
+
+	</script>
+</body>
+</html>
